@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 /**
-* main Entry point
+* main - Entry point
 *
-* Script to print quoted statement to output.
+* puts -print declared char string to std output
 *
 * Return: Always 0 (Success)
 */
