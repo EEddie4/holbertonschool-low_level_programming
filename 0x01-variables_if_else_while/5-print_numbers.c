@@ -6,5 +6,13 @@
 */
 int main(void)
 {
-return (0);
+	char c;
+
+	while (c <= 9)
+	{
+		putchar(c);
+		c++;
+	}
+	putchar(10);
+	return (0);
 }
