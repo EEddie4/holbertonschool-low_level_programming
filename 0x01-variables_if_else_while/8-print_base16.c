@@ -6,5 +6,19 @@
 */
 int main(void)
 {
-return (0);
+	int i = '0';
+	char c = 'a';
+
+	while (i <= '9')
+	{
+		putchar(i);
+		i++;
+	}
+	while (c <= 'f')
+	{
+		putchar(c);
+		c++;
+	}
+	putchar(10);
+	return (0);
 }
