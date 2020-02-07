@@ -8,8 +8,8 @@ int main(void)
 {
 	char ch;
 
-	while (ch != 'e')
 	while (ch != 'q')
+	while (ch != 'e')
 	{
 	putchar(ch);
 	ch++;
