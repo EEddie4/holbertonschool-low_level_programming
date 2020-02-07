@@ -6,5 +6,25 @@
 */
 int main(void)
 {
-return (0);
+	int i = '0';
+	int d = '0';
+
+	while ((i <= '9') && (d <= '9'))
+	{
+		putchar(i);
+		putchar(d);
+		if (i == d)
+		{
+			break;
+		}
+	while ((i < '9') && (d < '9'))
+	{
+		putchar(',');
+		putchar(' ');
+	}
+		i++;
+		d++;
+	}
+	putchar(10);
+	return (0);
 }
