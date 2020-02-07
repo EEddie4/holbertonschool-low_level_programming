@@ -6,5 +6,19 @@
 */
 int main(void)
 {
-return (0);
+	int i = '0';
+
+	while (i <= '9')
+	{
+		if (i < '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+		else
+		putchar(i);
+		i++;
+	}
+	putchar(10);
+	return (0);
 }
