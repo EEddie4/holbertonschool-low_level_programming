@@ -6,24 +6,18 @@
 */
 int main(void)
 {
-	int i = '0';
-	int d = '0';
+	int tens = '0';
+	int ones = '0';
 
-	while ((i <= '9') && (d <= '9'))
+	for (tens = '0'; tens <= '9'; tens++)
 	{
-		putchar(i);
-		putchar(d);
-		if (i == d)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			break;
+			putchar(tens);
+			putchar(ones);
+			putchar(',');
+			putchar(' ');
 		}
-	while ((i < '9') && (d < '9'))
-	{
-		putchar(',');
-		putchar(' ');
-	}
-		i++;
-		d++;
 	}
 	putchar(10);
 	return (0);
