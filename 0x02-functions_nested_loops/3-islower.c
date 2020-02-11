@@ -8,13 +8,13 @@
 */
 int _islower(int c)
 {
-	if (c > 0 && c != 0)
+	if (c > '0' && c != '0')
 	{
-		return (c);
+		return (1);
 	}
 	else
 	{
 		return (0);
 	}
-	return (0);
+	return (c);
 }
