@@ -10,17 +10,25 @@ int print_last_digit(int r)
 {
 	int i;
 
-	i = (r % 10);
-
-	if (i < 0)
+	if (i < '0')
 	{
-		_putchar(i * -1);
-		_putchar(i + '0');
+		r = i % 10;
+		_putchar(r + '0');
+		return (r);
+	}
+	else if (i > '0')
+	{
+		r = i % 10;
+		_putchar(r + '0');
+		return (r);
+
 	}
 	else
 	{
-		_putchar(i + '0');
-		return (0);
+		i = i * -1;
+		i = r % 10;
+		_putchar(r + '0');
+		return (r);
 	}
 	return (0);
 }
