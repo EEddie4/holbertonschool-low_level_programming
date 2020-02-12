@@ -1,4 +1,8 @@
 #include "holberton.h"
+#define SEPERATE {\
+	_putchar(',');\
+	_putchar(' ');\
+	}
 /**
 * times_table - function
 *
@@ -7,4 +11,5 @@
 */
 void times_table(void)
 {
+	int rows = 0, columns = 0
 }
