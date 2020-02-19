@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
-print_array - function
+* print_array - function
+* @a: operand
 * @n: operand
 *
 * Description: prints n elements of an array of integers w/ \n
