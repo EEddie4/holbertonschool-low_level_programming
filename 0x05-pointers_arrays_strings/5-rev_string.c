@@ -25,5 +25,4 @@ void rev_string(char *s)
 		r++;
 		s[i] = front;
 	}
-	_putchar(10);
 }
