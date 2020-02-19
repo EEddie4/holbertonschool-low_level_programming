@@ -8,21 +8,20 @@
 */
 void puts2(char *str)
 {
-
+	int counter = 0;
 	int i = 0;
-/*	int d;*/
 
-	for (i = 0; str[i] != '\0'; i++)
-		;
-	if (i % 2 == 0)
+	while (str[i])
 	{
-	/*	i = i / 2;*/
-		_putchar(*str);
-		str++;
+		counter++;
+		i++;
 	}
-	else
+	for (i = 0; i < counter; i++)
 	{
-	/*	d = str[i] - 1 / 2;*/
+		if (i % 2 == 0)
+		{
+		_putchar(str[i]);
+		}
 	}
 	_putchar(10);
 }
