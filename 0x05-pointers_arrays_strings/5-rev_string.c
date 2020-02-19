@@ -23,7 +23,7 @@ void rev_string(char *s)
 
 		s[r] = back;
 		r++;
-		s[i--] = front;
+		s[i] = front;
 	}
 	_putchar(10);
 }
