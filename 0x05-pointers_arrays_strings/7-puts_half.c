@@ -4,7 +4,8 @@
 * @str: string operand
 *
 * Description: prints half of a string
-* Return: string*/
+* Return: string
+*/
 void puts_half(char *str)
 {
 }
