@@ -10,19 +10,19 @@ void puts2(char *str)
 {
 
 	int i = 0;
-	int d;
+/*	int d;*/
 
 	for (i = 0; str[i] != '\0'; i++)
 		;
-	if (str[i] % 2 == 0)
+	if (i % 2 == 0)
 	{
-		i = str[i] / 2;
+	/*	i = i / 2;*/
 		_putchar(*str);
 		str++;
 	}
 	else
 	{
-		d = str[i] - 1 / 2;
+	/*	d = str[i] - 1 / 2;*/
 	}
 	_putchar(10);
 }
