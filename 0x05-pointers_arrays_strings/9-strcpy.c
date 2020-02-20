@@ -1,11 +1,20 @@
 #include "holberton.h"
 /**
 * _strcpy - function
-* @src: operand
+* @src: copy from
+* @dest: copy to
 *
-* Description: copies strng pnted by src, including the (\0) to buffer pnted by dest
-*Return: char
+* Description: copies strng pnted by src to dest with null
+* Return: char
 */
 char *_strcpy(char *dest, char *src)
 {
+	int i;
+
+	for (i = 0; src[i]; src++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
+	return (dest);
 }
