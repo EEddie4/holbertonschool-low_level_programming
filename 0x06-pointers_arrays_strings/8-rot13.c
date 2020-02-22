@@ -8,12 +8,11 @@
 * Description: Encodes a string using rot13
 * Return: s
 */
-char *rot13(char *alpha, char *cipher, char *s)
+char *rot13(char *s)
 {
 	int i, j;
-
-	alpha[53];
-	cipher[53];
+	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char cipher[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (i = 0; s[i]; i++)
 	{
@@ -21,7 +20,8 @@ char *rot13(char *alpha, char *cipher, char *s)
 		if (s[i] == alpha[j])
 		{
 			s[i] = cipher[j];
+			break;
 		}
-		return (s);
 	}
+	return (s);
 }
