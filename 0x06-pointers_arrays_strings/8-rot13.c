@@ -1,8 +1,6 @@
 #include "holberton.h"
 /**
 * rot13 - function
-* @alpha: alphabet string
-* @cipher: rot13 cipher
 * @s: operand
 *
 * Description: Encodes a string using rot13
