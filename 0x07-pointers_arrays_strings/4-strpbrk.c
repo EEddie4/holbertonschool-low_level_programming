@@ -22,8 +22,7 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
-	if (s[i] != accept[j])
-		return (NULL);
+	return (NULL);
 
 	return (0);
 }
