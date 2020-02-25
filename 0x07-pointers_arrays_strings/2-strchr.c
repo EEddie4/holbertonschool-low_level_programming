@@ -18,6 +18,8 @@ char *_strchr(char *s, char c)
 		}
 	if (*s == c && c == NULL)
 		return (s);
+	if (*s == NULL)
+		break;
 	}
 	return (NULL);
 }

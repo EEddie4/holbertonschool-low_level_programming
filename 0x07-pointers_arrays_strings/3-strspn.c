@@ -1,4 +1,5 @@
 #include "holberton.h"
+#define NULL 0
 /**
 * _strspn - function
 * @s: return num bytes of
@@ -13,6 +14,9 @@ unsigned int _strspn(char *s, char *accept)
 
 	counter = 0;
 
+	if (*s == NULL || *accept == NULL)
+		return (0);
+
 	for (i = 0; s[i]; i++)
 	{
 		for (j = 0; accept[j]; j++)
@@ -22,9 +26,11 @@ unsigned int _strspn(char *s, char *accept)
 				counter++;
 				break;
 			}
-			else if (s[i] != accept[i])
+			else if (*accept == '\0')
+			{
 				break;
+			}
 		}
 	}
-	return(counter);
+	return (counter);
 }
