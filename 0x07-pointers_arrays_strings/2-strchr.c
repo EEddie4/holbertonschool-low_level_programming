@@ -1,4 +1,5 @@
 #include "holberton.h"
+#define NULL 0
 /**
 * _strchr - function
 * @s: string to search in
@@ -15,8 +16,8 @@ char *_strchr(char *s, char c)
 		{
 			return (s);
 		}
-	if (*s == c && c == '\0')
+	if (*s == c && c == NULL)
 		return (s);
 	}
-	return ('\0');
+	return (NULL);
 }
