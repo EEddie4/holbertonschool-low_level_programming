@@ -18,7 +18,7 @@ int is_prime_number(int n)
 			return (0);
 		}
 	}
-	if (c == n || c * c > n)
+	if (c == n)
 	{
 		return (1);
 	}
