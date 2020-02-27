@@ -12,15 +12,15 @@ int is_prime_number(int n)
 
 	if (c <= n - 1)
 	{
-		c++;
 		if (n % c == 0 || n <= 1)
 		{
 			return (0);
 		}
 	}
-	if (c == n)
+	if (c == n || c * c > n)
 	{
 		return (1);
 	}
-	return (0);
+	c++;
+	return (is_prime_number(n + 1));
 }
