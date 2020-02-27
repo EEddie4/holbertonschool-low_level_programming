@@ -12,6 +12,7 @@ int is_prime_number(int n)
 
 	if (c <= n - 1)
 	{
+		c++;
 		if (n % c == 0 || n <= 1)
 		{
 			return (0);
@@ -21,6 +22,5 @@ int is_prime_number(int n)
 	{
 		return (1);
 	}
-	c++;
-	return (is_prime_number(n + 1));
+	return (0);
 }
