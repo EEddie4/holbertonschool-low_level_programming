@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int i, val = 1;
 
-	if (argc > 1)
+	if (argc > 1 && argc < 4)
 	{
 		for (i = 1; i < argc; i++)
 		{
@@ -20,7 +20,12 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", val);
 	}
-	else if (argc == 1)
+	if (argc == 1)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else if (argc > 3)
 	{
 		printf("Error\n");
 		return (1);
