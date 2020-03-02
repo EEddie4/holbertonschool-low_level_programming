@@ -22,15 +22,15 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else if (argc > 1 && argc >= 3)
+	else
 	{
-		for (i = 0; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			for (j = 0; j < argc; j++)
+			for (j = 0; argv[i][j]; j++)
 			{
-				if (*argv[i] > '0' && *argv[i] > '9')
+				if (argv[i][j] > '0' && argv[i][j] > '9')
 				{
-					printf("Errornew\n");
+					printf("Error\n");
 					return (1);
 				}
 				else
