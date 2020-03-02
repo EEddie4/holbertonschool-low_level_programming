@@ -11,7 +11,7 @@
 */
 int main(int argc, char *argv[])
 {
-	int i, val = 0;
+	int i, j, val = 0;
 
 	if (argc == 1)
 	{
@@ -24,19 +24,22 @@ int main(int argc, char *argv[])
 	}
 	else if (argc > 1 && argc >= 3)
 	{
-		for (i = 1; i < argc; i++)
+		for (i = 0; i < argc; i++)
 		{
-			if (i < '0' && i > '9')
+			for (j = 0; j < argc; j++)
 			{
-				printf("Errornew\n");
-				return (1);
-			}
-			else
-			{
-				val += atoi(argv[i]);
+				if (*argv[i] > '0' && *argv[i] > '9')
+				{
+					printf("Errornew\n");
+					return (1);
+				}
+				else
+				{
+					val += atoi(argv[i]);
+				}
 			}
 		}
-		printf("%d\n", val);
+			printf("%d\n", val);
 	}
 	return (0);
 }
