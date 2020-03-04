@@ -15,7 +15,11 @@ char *_strdup(char *str)
 	char *copy;
 
 	copy = (char *) malloc(_strlen(str) + 1);
-	if (copy == NULL || str == NULL)
+	if (copy == NULL)
+	{
+		return (NULL);
+	}
+	if (str == NULL)
 	{
 		return (NULL);
 	}
