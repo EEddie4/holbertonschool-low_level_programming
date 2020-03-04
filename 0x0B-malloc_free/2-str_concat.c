@@ -17,7 +17,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL || s2 == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 	combo = malloc((_strlen(s1) + _strlen(s2) + 1) * sizeof(char));
 	if (combo == NULL)
@@ -37,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 		combo[i] = s2[k];
 		i++;
 	}
-	combo[i + 1] = '\0';
+	combo[i] = '\0';
 	return (combo);
 }
 
