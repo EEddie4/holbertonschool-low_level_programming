@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	i = 0;
 
-	for (j = 0; j < s1[j]; j++)
+	for (j = 0; s1[j]; j++)
 	{
 		combo[i] = s1[j];
 		i++;
