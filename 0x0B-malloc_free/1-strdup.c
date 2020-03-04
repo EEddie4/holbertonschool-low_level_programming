@@ -15,15 +15,12 @@ char *_strdup(char *str)
 	char *copy;
 
 	copy = (char *) malloc(_strlen(str) * sizeof(char) + 1);
-	if (str == NULL)
+	if (str == NULL || copy == NULL)
 	{
+		free(copy);
 		return (NULL);
 	}
 	_strcpy(copy, str);
-	if (copy == NULL)
-	{
-		return (NULL);
-	}
 	return (copy);
 
 }
