@@ -26,7 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 
-	combo = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
+	combo = malloc(sizeof(char) * (_strlen(s1) + n + 1));
 	if (combo == NULL)
 	{
 		return (NULL);
