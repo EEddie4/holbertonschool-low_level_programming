@@ -13,8 +13,7 @@ int _strlen(char *s);
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, j, k;
-	unsigned int l;
+	unsigned int i, j, k, l;
 	char *combo;
 
 	if (s1 == NULL)
