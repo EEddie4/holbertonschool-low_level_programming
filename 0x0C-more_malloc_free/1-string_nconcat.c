@@ -13,7 +13,7 @@ int _strlen(char *s);
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i, j, k, l;
+	unsigned int i, j, k, len2;
 	char *combo;
 
 	if (s1 == NULL)
@@ -24,30 +24,28 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
+	len2 = _strlen(s2);
+	if (len2 > n)
+	{
+		len2 = n;
+	}
 
-	combo = malloc(sizeof(char) * (_strlen(s1) + n + 1));
+	combo = malloc(sizeof(char) * (_strlen(s1) + len2 + 1));
 	if (combo == NULL)
 	{
 		free(combo);
 		return (NULL);
 	}
 	i = 0;
-	for (j = 0; s1[j]; j++)
+	for (j = 0; s1[j]; i++, j++)
 	{
 		combo[i] = s1[j];
-		i++;
 	}
-	for (k = 0; k < n; k++)
+	for (k = 0; k < len2; i++, k++)
 	{
-		for (l = 0; s2[l]; l++)
-		{
-			if (n >= l)
-				combo[i] = s2[l];
-			else
-				combo[i] = s2[k];
-		}
-		i++;
+		combo[i] = s2[k];
 	}
+
 	combo[i] = '\0';
 	return (combo);
 }
@@ -60,7 +58,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 */
 int _strlen(char *s)
 {
-	int index = 0;
+	unsigned int index = 0;
 
 	while (*s != '\0')
 	{
