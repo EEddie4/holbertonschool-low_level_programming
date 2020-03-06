@@ -11,18 +11,21 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *setmem;
+	char *setmem;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
-	setmem = malloc(sizeof(size) * nmemb);
+	setmem = malloc(size * nmemb);
 	if (setmem == NULL)
 	{
 		return (NULL);
 	}
-	memset(setmem, 0, nmemb * sizeof(size));
-
+	for (i = 0; i < (nmemb * size); i++)
+	{
+		setmem[i] = 0;
+	}
 	return (setmem);
 }
