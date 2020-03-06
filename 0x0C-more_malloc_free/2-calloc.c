@@ -17,7 +17,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	setmem = malloc(sizeof(unsigned int) * size);
+	setmem = malloc(sizeof(size) * nmemb);
 	if (setmem == NULL)
 	{
 		return (NULL);
