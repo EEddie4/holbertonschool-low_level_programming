@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <string.h>
 /**
 * array_range - function
 * @min: minimum value of array
@@ -11,14 +10,21 @@
 */
 int *array_range(int min, int max)
 {
-	int *range, i;
+	int *range, size, i;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
-	for (i = min; i < max; i++)
-	range = malloc(sizeof(int) * i);
+	size = 1;
+	size += max - min;
+	range = malloc(sizeof(int) * size);
+	if (range == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i <= size; i++, min++)
+		range[i] = min;
 
 	return (range);
 }
