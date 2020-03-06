@@ -1,0 +1,28 @@
+#include "holberton.h"
+#include <stdlib.h>
+#include <string.h>
+/**
+* _calloc - function
+* @nmemb: unsigned int array in ptr
+* @size: size of nmemb in ptr
+*
+* Description: allocates memory of an array, set to zero
+* Return: ptr to array of size int, or NULL if fail
+*/
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+	void *setmem;
+
+	if (nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
+	setmem = malloc(sizeof(unsigned int) * size);
+	if (setmem == NULL)
+	{
+		return (NULL);
+	}
+	memset(setmem, 0, size);
+
+	return (setmem);
+}
