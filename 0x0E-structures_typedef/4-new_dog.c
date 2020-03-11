@@ -14,14 +14,38 @@ char *_strcpy(char *dest, char *src);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	char *doggo;
+	char *nename, *neowner;
+	int lename, leowner, i;
 
-	while (age);
-	if (name == NULL || owner == NULL)
-		return (NULL);
-	doggo = malloc(sizeof(char) * (_strlen(name) + _strlen(owner) + 1));
+	dog_t doggo = malloc(sizeof(dog_t));
+
 	if (doggo == NULL)
 		return (NULL);
-	return (0);
+	_strlen(name);
+	lename = _strlen(name);
+	name = malloc((lename + 1) * sizeof(char));
+	if (name == NULL)
+	{
+		free(doggo);
+		return (NULL);
+	}
+	_strcpy(nename, name);
+	_strlen(owner);
+	leowner = _strlen(owner;
+	owner = malloc((leowner + 1) * sizeof(char));
+	if (owner == NULL)
+	{
+		free(doggo);
+		free(name);
+		return (NULL);
+	}
+	_strcpy(neowner, owner);
+
+	doggo->name = nename;
+	doggo->age = age;
+	doggo->owner = owner;
+
+	return (doggo);
 }
 
 /**
