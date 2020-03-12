@@ -8,5 +8,19 @@
 */
 int main(void)
 {
+	int bytes = 1;
+	int args = 2;
+
+	if (args != bytes)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+
+	if (bytes < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
 	return (0);
 }
