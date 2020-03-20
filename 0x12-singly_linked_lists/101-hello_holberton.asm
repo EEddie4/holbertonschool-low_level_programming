@@ -1,5 +1,5 @@
 segment .data
-hello db "Hello, Holberton!", 0xa, 0
+hello db "Hello, Holberton", 0xa, 0
 
 segment .text
 extern printf
