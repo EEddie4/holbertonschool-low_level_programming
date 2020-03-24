@@ -10,15 +10,15 @@ void free_listint2(listint_t **head)
 {
 	listint_t *temp; /* Will store head ->next*/
 
-	if (*head == NULL)
+	temp = (*head);
+	if (temp == NULL || head == NULL)
 		return;
-	temp = *head;
 	while (*head != NULL)
 	{
 		temp = (*head)->next;
 		/* free the stuff inside what head is pointing to*/
 		free(*head);
-		*head = temp; /* goes to next node in list and repeat process*/
+		(*head) = temp; /* goes to next node in list and repeat process*/
 	}
 	head = NULL;
 }
