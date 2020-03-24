@@ -19,4 +19,5 @@ void free_listint2(listint_t **head)
 		free(*head);
 		*head = temp; /* goes to next node in list and repeat process*/
 	}
+	*head = NULL;
 }
