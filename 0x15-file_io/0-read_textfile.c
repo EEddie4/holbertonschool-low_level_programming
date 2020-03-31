@@ -12,6 +12,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buff;
 	int fd, sz;
 
+	if (filename == NULL)
+		return (0);
 	fd = open(filename, letters);
 	if (fd == -1)
 		return (0);
@@ -19,6 +21,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buff == NULL)
 		return (0);
 	sz = read(fd, buff, letters);
+	if (sz == -1)
+		return (0);
 	printf("%s", buff);
 
 	buff[sz] = '\0';
