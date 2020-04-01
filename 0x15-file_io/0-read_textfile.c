@@ -17,13 +17,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, letters);
 	if (fd == -1)
 		return (0);
+
 	buff = (char *)malloc(sizeof(char) * letters);
 	if (buff == NULL)
 		return (0);
 	sz = read(fd, buff, letters);
 	if (sz == -1)
 		return (0);
-	printf("%s", buff);
+	write(STDOUT_FILENO, buff, letters);
 
 	buff[sz] = '\0';
 	free(buff);
