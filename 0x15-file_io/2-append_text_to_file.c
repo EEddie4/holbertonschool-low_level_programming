@@ -19,6 +19,8 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	while (text_content[sz] != '\0')
 		sz++;
+	if (text_content == NULL)
+		text_content = "";
 
 	wr = write(fd, text_content, sz);
 
