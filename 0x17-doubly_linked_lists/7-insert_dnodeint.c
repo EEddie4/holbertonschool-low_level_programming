@@ -35,5 +35,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		toindex++;
 		temph = temph->next;
 	}
+	if (toindex == 0 || toindex < idx)
+		return (newNode);
+
+	temph = *h;
 	return (newNode);
 }
