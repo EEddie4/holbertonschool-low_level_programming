@@ -21,11 +21,9 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		toindex++;
 		temph = temph->next;
 	}
-/*
-*if (toindex == 0 || toindex < index)
-*	return (temph);
-*
-*temph = head;
-*/
+	if (toindex == 0 || toindex < index)
+		return (temph);
+
+	temph = head;
 	return (temph->next);
 }
