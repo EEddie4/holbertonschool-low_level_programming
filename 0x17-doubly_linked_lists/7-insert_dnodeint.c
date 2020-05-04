@@ -35,8 +35,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		toindex++;
 		temph = temph->next;
 	}
-	if (toindex == 0 || toindex < idx)
+	if (toindex == 0)
 		return (temph);
+	if (toindex < idx)
+		return (NULL);
 
 	temph = *h;
 	return (newNode);
