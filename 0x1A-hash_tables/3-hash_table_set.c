@@ -27,13 +27,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		newNode->value = (strdup(value));
 		newNode->next = NULL;
 		ht->array[index]->next = newNode;
-		return (1); }
+		return (1);
+	}
 	tempNode = ht->array[index];
 	while (tempNode) /*while "head" is not NULL*/
 	{
 		if (strcmp(key, tempNode->key) == 0)
-		{/*checking when key matches the key we need, 0 is true*/
-			tempNode->value = (strdup(value));
+		{tempNode->value = (strdup(value));
 			return (1);
 		}
 		tempNode = tempNode->next;/*traversing*/}
