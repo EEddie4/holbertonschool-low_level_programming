@@ -16,7 +16,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL)
 		return (0);
 	index = (hash_djb2((const unsigned char *)key) % (ht->size));
-	if (key == NULL || value == NULL || key == '\0')
+	tempNode = ht->array[index];
+	if (key == NULL || value == NULL || (strcmp(tempNode->key, "") == 0))
 		return (0);
 	if (ht->array[index] == NULL) /*slot is empty, put node here*/
 	{newNode = malloc(sizeof(hash_node_t));
@@ -28,7 +29,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		newNode->next = NULL;
 		return (1);
 	}
-	tempNode = ht->array[index];
 	while (tempNode) /*while "head" is not NULL*/
 	{
 		if (strcmp(key, tempNode->key) == 0)
@@ -45,8 +45,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = newNode;
 		newNode->key = (strdup(key));
 		newNode->value = (strdup(value));
-		newNode->next = tempNode->next;
-		ht->array[index]->next = newNode;
+		newNode->next = tempNode;
+		ht->array[index] = newNode;
 		return (1);
 	}
 	return (0);
