@@ -14,15 +14,16 @@ void hash_table_print(const hash_table_t *ht)
 	if (ht == NULL)
 		return;
 
+	printf("{");
 	for (index = 0; index < (ht->size); index++)
 	{
 		moveNode = ht->array[index];
-		while (ht != NULL)
+		while (moveNode != NULL)
 		{
 			printf("\'%s\': \'%s\'", (moveNode->key), (moveNode->value));
 			printf(",");
 			moveNode = moveNode->next;
 		}
-		printf("\n");
 	}
+	printf("}\n");
 }
