@@ -8,17 +8,20 @@
 */
 void hash_table_print(const hash_table_t *ht)
 {
+	hash_node_t *movenode;
 	unsigned long int index;
-/*har *value;*/
-	/*char *key;*/
 
 	if (ht == NULL)
-		printf("{}\n");
+		return;
 
-	if (ht != NULL)
+	for (index = 0; index < (ht->size); index++)
 	{
-		for (index = 0; index < (ht->size); index++)
-			printf("Inside for loop\n");
-		/*rintf("{'%s' :,", value);*/
+		movenode = ht->array[index];
+		while (ht != NULL)
+		{
+			printf("{'%s' : '%s',", (movenode->key), (movenode->value));
+			movenode = movenode->next;
+		}
+		printf("\n");
 	}
 }
