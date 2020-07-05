@@ -1,0 +1,9 @@
+#task 2 of makefile
+
+CC=gcc #compiler to be used
+SRC=main.c holberton.c #source files to compile with
+OBJ=main.o holberton.o #object files from source files
+NAME=holberton #name of executable
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
